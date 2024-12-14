@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|c:\\users\\elsid\\source\\repos\\windowsformsapp1\\criminalfindingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|solutionrelative:criminalfindingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\criminalfindingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|solutionrelative:criminalfindingform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\detective.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|solutionrelative:detective.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\criminalfindingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E15AD261-9418-478D-B99A-0E9881C390F5}|FindingCriminal.csproj|solutionrelative:criminalfindingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 236,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Detective.cs",
+              "DocumentMoniker": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\Detective.cs",
+              "RelativeDocumentMoniker": "Detective.cs",
+              "ToolTip": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\Detective.cs",
+              "RelativeToolTip": "Detective.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:59:40.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CriminalFindingForm.cs",
+              "DocumentMoniker": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\CriminalFindingForm.cs",
+              "RelativeDocumentMoniker": "CriminalFindingForm.cs",
+              "ToolTip": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\CriminalFindingForm.cs",
+              "RelativeToolTip": "CriminalFindingForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:58:35.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CriminalFindingForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\CriminalFindingForm.Designer.cs",
+              "RelativeDocumentMoniker": "CriminalFindingForm.Designer.cs",
+              "ToolTip": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\CriminalFindingForm.Designer.cs",
+              "RelativeToolTip": "CriminalFindingForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:58:59.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CriminalFindingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\CriminalFindingForm.cs",
+              "RelativeDocumentMoniker": "CriminalFindingForm.cs",
+              "ToolTip": "C:\\Users\\elsid\\source\\repos\\WindowsFormsApp1\\CriminalFindingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "CriminalFindingForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T07:55:54.056Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
