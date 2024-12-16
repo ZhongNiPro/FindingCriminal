@@ -6,18 +6,18 @@ namespace FindingCriminal
 {
     internal class CountriesProvider : ICountriesProvider
     {
-        private readonly string countriesFile;
-        private readonly List<string> countries;
+        private readonly string _countriesFile;
+        private readonly List<string> _countries;
 
         public CountriesProvider()
         {
-            countriesFile = "Resources/Countries.txt";
-            countries = File.ReadAllLines(countriesFile).ToList();
+            _countriesFile = "Resources/Countries.txt";
+            _countries = File.ReadAllLines(_countriesFile).ToList();
         }
 
         public List<string> ReceiveCountries()
         {
-            return countries.ToList();
+            return _countries.ToList();
         }
     }
 }

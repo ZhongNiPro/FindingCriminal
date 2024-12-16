@@ -50,7 +50,7 @@
     <Compile Include="ListingProvider.cs" />
     <Compile Include="NormalRandom.cs" />
     <Compile Include="CountriesProvider.cs" />
-    <Compile Include="CriminalsProvider.cs" />
+    <Compile Include="CriminalsFactory.cs" />
     <Compile Include="Detective.cs" />
     <Compile Include="Criminal.cs" />
     <Compile Include="CriminalFindingForm.cs">
@@ -59,7 +59,7 @@
     <Compile Include="CriminalFindingForm.Designer.cs">
       <DependentUpon>CriminalFindingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ICriminalsProvider.cs" />
+    <Compile Include="ICriminalsFactory.cs" />
     <Compile Include="ICountriesProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,31 +6,31 @@ using System.Linq;
 
 namespace FindingCriminal
 {
-    internal class CriminalsProvider : ICriminalsProvider
+    internal class CriminalsFactory : ICriminalsFactory
     {
-        private readonly string namesFile;
-        private readonly string surnamesFile;
+        private readonly string _namesFile;
+        private readonly string _surnamesFile;
 
-        private Random random;
-        private NormalRandom normalRandom;
+        private Random _random;
+        private NormalRandom _normalRandom;
 
-        internal CriminalsProvider()
+        internal CriminalsFactory()
         {
-            namesFile = "Resources/Names.txt";
-            surnamesFile = "Resources/Surnames.txt";
+            _namesFile = "Resources/Names.txt";
+            _surnamesFile = "Resources/Surnames.txt";
 
-            random = new Random();
-            normalRandom = new NormalRandom();
+            _random = new Random();
+            _normalRandom = new NormalRandom();
         }
 
-        public List<Criminal> CreateCriminals()
+        public List<Criminal> Create()
         {
             List<Criminal> criminals = new List<Criminal>();
             ICountriesProvider countriesProvider = new CountriesProvider();
             TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
 
-            List<string> names = File.ReadAllLines(namesFile).ToList();
-            List<string> surnames = File.ReadAllLines(surnamesFile).ToList();
+            List<string> names = File.ReadAllLines(_namesFile).ToList();
+            List<string> surnames = File.ReadAllLines(_surnamesFile).ToList();
             List<string> countries = countriesProvider.ReceiveCountries();
 
             int limitRecords = 1000;
@@ -38,7 +38,7 @@ namespace FindingCriminal
 
             for (int i = 0; i < limitRecords; i++)
             {
-                bool isPrisoned = random.Next(statesNumber) == 0;
+                bool isPrisoned = _random.Next(statesNumber) == 0;
                 string name = GetStringValue(names);
                 string surname = GetStringValue(surnames, isSurname: true);
                 string country = GetStringValue(countries);
@@ -59,7 +59,7 @@ namespace FindingCriminal
 
         private string GetStringValue(List<string> list, bool isSurname = false)
         {
-            string value = list[random.Next(list.Count)];
+            string value = list[_random.Next(list.Count)];
 
             if (isSurname == true && value.Last() == 'a')
             {
@@ -73,7 +73,7 @@ namespace FindingCriminal
         {
             int deviation = 12;
 
-            double value = normalRandom.NextDouble() * deviation + expectation;
+            double value = _normalRandom.NextDouble() * deviation + expectation;
 
             return (int)value;
         }

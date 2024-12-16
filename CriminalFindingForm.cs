@@ -112,7 +112,7 @@ namespace FindingCriminal
             }
         }
 
-        private void MinHeightListSelectedIndexChanged(object sender, EventArgs e)
+        private void ChangeMinHeightListSelectedIndex(object sender, EventArgs e)
         {
             MinHeight = GetIntValue(_minHeightList.SelectedItem.ToString(), _minHeightValue, _maxHeightValue, defaultValue: _minHeightValue);
 
@@ -122,7 +122,7 @@ namespace FindingCriminal
             }
         }
 
-        private void MaxHeightListSelectedIndexChanged(object sender, EventArgs e)
+        private void ChangeMaxHeightListSelectedIndex(object sender, EventArgs e)
         {
             MaxHeight = GetIntValue(_maxHeightList.SelectedItem.ToString(), _minHeightValue, _maxHeightValue, defaultValue: _maxHeightValue);
 
@@ -132,7 +132,7 @@ namespace FindingCriminal
             }
         }
 
-        private void MinWeightListSelectedIndexChanged(object sender, EventArgs e)
+        private void ChangeMinWeightListSelectedIndex(object sender, EventArgs e)
         {
             MinWeight = GetIntValue(_minWeightList.SelectedItem.ToString(), _minWeightValue, _maxWeightValue, defaultValue: _minWeightValue);
 
@@ -142,7 +142,7 @@ namespace FindingCriminal
             }
         }
 
-        private void MaxWeightListSelectedIndexChanged(object sender, EventArgs e)
+        private void ChangeMaxWeightListSelectedIndex(object sender, EventArgs e)
         {
             MaxWeight = GetIntValue(_maxWeightList.SelectedItem.ToString(), _minWeightValue, _maxWeightValue, defaultValue: _maxWeightValue);
 
@@ -166,12 +166,12 @@ namespace FindingCriminal
             }
         }
 
-        private void _nationalityList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ChangeNationalityListSelectedIndex(object sender, EventArgs e)
         {
             Nationality = _nationalityList.Items[_nationalityList.SelectedIndex].ToString();
         }
 
-        private void _prisonedList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ChangePrisonedListSelectedIndex(object sender, EventArgs e)
         {
             Status = _prisonedList.Items[_prisonedList.SelectedIndex].ToString();
         }

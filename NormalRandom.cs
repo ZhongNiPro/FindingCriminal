@@ -5,14 +5,14 @@ namespace FindingCriminal
     // метод Марсальи, магические числа и переменные из математики 
     class NormalRandom : Random
     {
-        double previousSample = double.NaN;
+        public double PreviousSample { get; private set; } = double.NaN;
 
         protected override double Sample()
         {
-            if (double.IsNaN(previousSample) == false)
+            if (double.IsNaN(PreviousSample) == false)
             {
-                double result = previousSample;
-                previousSample = double.NaN;
+                double result = PreviousSample;
+                PreviousSample = double.NaN;
 
                 return result;
             }
@@ -29,7 +29,7 @@ namespace FindingCriminal
 
             double r = Math.Sqrt(-2 * Math.Log(s) / s);
 
-            previousSample = r * v;
+            PreviousSample = r * v;
 
             return r * u;
         }

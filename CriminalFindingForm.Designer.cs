@@ -52,7 +52,7 @@
             this._minHeightList.Name = "_minHeightList";
             this._minHeightList.Size = new System.Drawing.Size(121, 28);
             this._minHeightList.TabIndex = 0;
-            this._minHeightList.SelectedIndexChanged += new System.EventHandler(this.MinHeightListSelectedIndexChanged);
+            this._minHeightList.SelectedIndexChanged += new System.EventHandler(this.ChangeMinHeightListSelectedIndex);
             // 
             // _criminalsList
             // 
@@ -80,7 +80,7 @@
             this._maxHeightList.Name = "_maxHeightList";
             this._maxHeightList.Size = new System.Drawing.Size(121, 28);
             this._maxHeightList.TabIndex = 3;
-            this._maxHeightList.SelectedIndexChanged += new System.EventHandler(this.MaxHeightListSelectedIndexChanged);
+            this._maxHeightList.SelectedIndexChanged += new System.EventHandler(this.ChangeMaxHeightListSelectedIndex);
             // 
             // _maxWeightList
             // 
@@ -89,7 +89,7 @@
             this._maxWeightList.Name = "_maxWeightList";
             this._maxWeightList.Size = new System.Drawing.Size(121, 28);
             this._maxWeightList.TabIndex = 5;
-            this._maxWeightList.SelectedIndexChanged += new System.EventHandler(this.MaxWeightListSelectedIndexChanged);
+            this._maxWeightList.SelectedIndexChanged += new System.EventHandler(this.ChangeMaxWeightListSelectedIndex);
             // 
             // _minWeightList
             // 
@@ -98,7 +98,7 @@
             this._minWeightList.Name = "_minWeightList";
             this._minWeightList.Size = new System.Drawing.Size(121, 28);
             this._minWeightList.TabIndex = 4;
-            this._minWeightList.SelectedIndexChanged += new System.EventHandler(this.MinWeightListSelectedIndexChanged);
+            this._minWeightList.SelectedIndexChanged += new System.EventHandler(this.ChangeMinWeightListSelectedIndex);
             // 
             // _minHeighLabel
             // 
@@ -143,7 +143,7 @@
             this._nationalityList.Name = "_nationalityList";
             this._nationalityList.Size = new System.Drawing.Size(121, 28);
             this._nationalityList.TabIndex = 10;
-            this._nationalityList.SelectedIndexChanged += new System.EventHandler(this._nationalityList_SelectedIndexChanged);
+            this._nationalityList.SelectedIndexChanged += new System.EventHandler(this.ChangeNationalityListSelectedIndex);
             // 
             // _nationalityLabel
             // 
@@ -161,7 +161,7 @@
             this._prisonedList.Name = "_prisonedList";
             this._prisonedList.Size = new System.Drawing.Size(121, 28);
             this._prisonedList.TabIndex = 12;
-            this._prisonedList.SelectedIndexChanged += new System.EventHandler(this._prisonedList_SelectedIndexChanged);
+            this._prisonedList.SelectedIndexChanged += new System.EventHandler(this.ChangePrisonedListSelectedIndex);
             // 
             // _statusLabel
             // 
