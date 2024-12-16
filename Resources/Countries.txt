@@ -85,7 +85,7 @@ Isle of Man
 Oman
 Panama
 Peru
-R?union
+Reunion
 Ecuador
 Kyrgyzstan
 Iran
@@ -127,7 +127,7 @@ Tanzania
 Trinidad and Tobago
 Guatemala
 Pakistan
-C?te d`Ivoire
+Cote d`Ivoire
 Japan
 Azerbaijan
 Gibraltar
@@ -147,7 +147,7 @@ Lithuania
 Belarus
 Switzerland
 New Caledonia
-Cura?ao
+Curacao
 Faroe Islands
 Turkmenistan
 Bolivia
@@ -188,7 +188,7 @@ Northern Mariana Islands
 Czech Republic
 Netherlands
 British Virgin Islands
-S?o Tom? and Pr?ncipe
+Sao Tome and Principe
 Burundi
 Suriname
 Cook Islands

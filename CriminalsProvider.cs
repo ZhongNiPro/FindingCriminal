@@ -8,11 +8,20 @@ namespace FindingCriminal
 {
     internal class CriminalsProvider : ICriminalsProvider
     {
-        private static Random s_random = new Random();
-        private static NormalRandom s_normalRandom = new NormalRandom();
+        private readonly string namesFile;
+        private readonly string surnamesFile;
 
-        private static readonly string namesFile = "Resources/Names.txt";
-        private static readonly string surnamesFile = "Resources/Surnames.txt";
+        private Random random;
+        private NormalRandom normalRandom;
+
+        internal CriminalsProvider()
+        {
+            namesFile = "Resources/Names.txt";
+            surnamesFile = "Resources/Surnames.txt";
+
+            random = new Random();
+            normalRandom = new NormalRandom();
+        }
 
         public List<Criminal> CreateCriminals()
         {
@@ -29,16 +38,16 @@ namespace FindingCriminal
 
             for (int i = 0; i < limitRecords; i++)
             {
-                bool isPrisoned = s_random.Next(statesNumber) == 0;
+                bool isPrisoned = random.Next(statesNumber) == 0;
                 string name = GetStringValue(names);
                 string surname = GetStringValue(surnames, isSurname: true);
                 string country = GetStringValue(countries);
 
                 int heightExpectation = 182;
-                int height = GetIntValue(heightExpectation);
+                int height = GetIntNormalRandomValue(heightExpectation);
                 int heightWeightRatio = 95;
                 int weightExpectation = height - heightWeightRatio;
-                int weight = GetIntValue(weightExpectation);
+                int weight = GetIntNormalRandomValue(weightExpectation);
 
                 Criminal criminal = new Criminal($"{textInfo.ToTitleCase(name)} {textInfo.ToTitleCase(surname)}", country, height, weight, isPrisoned);
 
@@ -50,7 +59,7 @@ namespace FindingCriminal
 
         private string GetStringValue(List<string> list, bool isSurname = false)
         {
-            string value = list[s_random.Next(list.Count)];
+            string value = list[random.Next(list.Count)];
 
             if (isSurname == true && value.Last() == 'a')
             {
@@ -60,11 +69,11 @@ namespace FindingCriminal
             return value;
         }
 
-        private int GetIntValue(int expectation)
+        private int GetIntNormalRandomValue(int expectation)
         {
             int deviation = 12;
 
-            double value = s_normalRandom.NextDouble() * deviation + expectation;
+            double value = normalRandom.NextDouble() * deviation + expectation;
 
             return (int)value;
         }

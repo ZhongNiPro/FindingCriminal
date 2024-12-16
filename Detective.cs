@@ -16,15 +16,17 @@ namespace FindingCriminal
             _provider = new CriminalsProvider();
             _form = form;
 
-            _form.UpdateButtonClicked -= OnUpdateButtonClicked;
-            _form.UpdateButtonClicked += OnUpdateButtonClicked;
+            _form.UpdateSearchButtonClicked -= OnUpdateButtonClicked;
+            _form.UpdateSearchButtonClicked += OnUpdateButtonClicked;
         }
 
         public async Task SearchAsync()
         {
+            bool isWorking = true;
+
             List<Criminal> criminals = _provider.CreateCriminals();
 
-            while (true)
+            while (isWorking)
             {
                 await WaitForButtonClickAsync();
 
@@ -32,6 +34,7 @@ namespace FindingCriminal
                 int maxHeight = _form.MaxHeight;
                 int minWeight = _form.MinWeight;
                 int maxWeight = _form.MaxWeight;
+                isWorking = _form.IsWorking;
 
                 List<Criminal> selectedCriminals = criminals.Where(criminal => criminal.Height >= minHeight).
                    Where(criminal => criminal.Height <= maxHeight).

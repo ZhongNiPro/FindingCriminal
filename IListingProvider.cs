@@ -4,8 +4,7 @@ namespace FindingCriminal
 {
     internal interface IListingProvider
     {
-        List<string> GetHeightList();
-        List<string> GetWeightList();
+        List<string> GetNumberList(int firstValue, int lastValue);
         List<string> GetStatusList();
         List<string> GetCountryList();
     }

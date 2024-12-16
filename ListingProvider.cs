@@ -4,38 +4,18 @@ namespace FindingCriminal
 {
     internal class ListingProvider : IListingProvider
     {
-        public List<string> GetHeightList()
+        public List<string> GetNumberList(int firstValue, int lastValue)
         {
-            List<string> heightList = new List<string>() { "<150" };
+            List<string> valueList = new List<string>() { "<" + firstValue };
 
-            int minHeight = 150;
-            int maxHeight = 210;
-
-            for (int i = minHeight; i <= maxHeight; i++)
+            for (int i = firstValue; i <= lastValue; i++)
             {
-                heightList.Add(i.ToString());
+                valueList.Add(i.ToString());
             }
 
-            heightList.Add(">210");
+            valueList.Add(">" + lastValue);
 
-            return heightList;
-        }
-
-        public List<string> GetWeightList()
-        {
-            List<string> weightList = new List<string>() { "<50" };
-
-            int minWeight = 50;
-            int maxWeight = 130;
-
-            for (int i = minWeight; i <= maxWeight; i++)
-            {
-                weightList.Add(i.ToString());
-            }
-
-            weightList.Add(">130");
-
-            return weightList;
+            return valueList;
         }
 
         public List<string> GetStatusList()

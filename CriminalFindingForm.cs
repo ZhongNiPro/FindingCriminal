@@ -18,6 +18,7 @@ namespace FindingCriminal
             MaxHeight = _maxHeightValue;
             MinWeight = _minWeightValue;
             MaxWeight = _maxWeightValue;
+            IsWorking = true;
 
             InitializeComponent();
 
@@ -31,8 +32,9 @@ namespace FindingCriminal
         public int MaxWeight { get; private set; }
         public string Nationality { get; private set; }
         public string Status { get; private set; }
+        public bool IsWorking { get; private set; }
 
-        internal event Action UpdateButtonClicked;
+        internal event Action UpdateSearchButtonClicked;
 
         internal async Task ShowCriminals(List<Criminal> criminals)
         {
@@ -49,7 +51,7 @@ namespace FindingCriminal
                     {
                         string status = criminal.IsPrisoned ? statusPrisoned : statusUnprisoned;
                         string record = $"{criminal.Name}\t Co:{criminal.Nationality}\t H:{criminal.Height}\t W:{criminal.Weight}\t St:{status}";
-                        
+
                         _criminalsList.Items.Add(record);
                     }
                 });
@@ -58,24 +60,36 @@ namespace FindingCriminal
 
         private void ClickSearchButton(object sender, EventArgs e)
         {
-            UpdateButtonClicked?.Invoke();
+            UpdateSearchButtonClicked?.Invoke();
+        }
+
+        private void ClickExitButton(object sender, EventArgs e)
+        {
+            IsWorking = false;
+
+            Task.Delay(100);
+            Application.Exit();
         }
 
         private void LoadCriminalFindingForm(object sender, EventArgs e)
         {
             IListingProvider listingProvider = new ListingProvider();
 
-            _minHeightList.Items.AddRange(listingProvider.GetHeightList().ToArray());
+            int firstHeightListValue = 150;
+            int lastHeightListValue = 210;
+            _minHeightList.Items.AddRange(listingProvider.GetNumberList(firstHeightListValue, lastHeightListValue).ToArray());
             _minHeightList.Items.RemoveAt(_minHeightList.Items.Count - 1);
             _minHeightList.SelectedIndex = 0;
-            _maxHeightList.Items.AddRange(listingProvider.GetHeightList().ToArray());
+            _maxHeightList.Items.AddRange(listingProvider.GetNumberList(firstHeightListValue, lastHeightListValue).ToArray());
             _maxHeightList.Items.RemoveAt(0);
             _maxHeightList.SelectedIndex = _minHeightList.Items.Count - 1;
 
-            _minWeightList.Items.AddRange(listingProvider.GetWeightList().ToArray());
+            int firstWeightListValue = 50;
+            int lastWeightListValue = 130;
+            _minWeightList.Items.AddRange(listingProvider.GetNumberList(firstWeightListValue, lastWeightListValue).ToArray());
             _minWeightList.Items.RemoveAt(_minWeightList.Items.Count - 1);
             _minWeightList.SelectedIndex = 0;
-            _maxWeightList.Items.AddRange(listingProvider.GetWeightList().ToArray());
+            _maxWeightList.Items.AddRange(listingProvider.GetNumberList(firstWeightListValue, lastWeightListValue).ToArray());
             _maxWeightList.Items.RemoveAt(0);
             _maxWeightList.SelectedIndex = _minWeightList.Items.Count - 1;
 

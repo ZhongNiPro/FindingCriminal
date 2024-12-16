@@ -16,8 +16,8 @@ namespace FindingCriminal
             Application.SetCompatibleTextRenderingDefault(false);
 
             CriminalFindingForm form = new CriminalFindingForm();
-            Detective class1 = new Detective(form);
-            Task.Run(async () => await class1.SearchAsync());
+            Detective detective = new Detective(form);
+            Task.Run(async () => await detective.SearchAsync());
 
             Application.Run(form);
         }

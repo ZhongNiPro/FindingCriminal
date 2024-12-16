@@ -42,6 +42,7 @@
             this._nationalityLabel = new System.Windows.Forms.Label();
             this._prisonedList = new System.Windows.Forms.ComboBox();
             this._statusLabel = new System.Windows.Forms.Label();
+            this._exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _minHeightList
@@ -64,7 +65,7 @@
             // 
             // _searchButton
             // 
-            this._searchButton.Location = new System.Drawing.Point(57, 528);
+            this._searchButton.Location = new System.Drawing.Point(57, 317);
             this._searchButton.Name = "_searchButton";
             this._searchButton.Size = new System.Drawing.Size(192, 43);
             this._searchButton.TabIndex = 2;
@@ -171,11 +172,22 @@
             this._statusLabel.TabIndex = 13;
             this._statusLabel.Text = "Status";
             // 
+            // _exitButton
+            // 
+            this._exitButton.Location = new System.Drawing.Point(238, 550);
+            this._exitButton.Name = "_exitButton";
+            this._exitButton.Size = new System.Drawing.Size(75, 43);
+            this._exitButton.TabIndex = 14;
+            this._exitButton.Text = "Exit";
+            this._exitButton.UseVisualStyleBackColor = true;
+            this._exitButton.Click += new System.EventHandler(this.ClickExitButton);
+            // 
             // CriminalFindingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 607);
+            this.Controls.Add(this._exitButton);
             this.Controls.Add(this._statusLabel);
             this.Controls.Add(this._prisonedList);
             this.Controls.Add(this._nationalityLabel);
@@ -214,6 +226,7 @@
         private System.Windows.Forms.Label _nationalityLabel;
         private System.Windows.Forms.ComboBox _prisonedList;
         private System.Windows.Forms.Label _statusLabel;
+        private System.Windows.Forms.Button _exitButton;
     }
 }
 
